@@ -35,8 +35,8 @@
                               <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
         <script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script>
-        <meta name="xm-bind-id-client_id" content="76262c82.ca20e5b1.tid_19e1b6a7.bindid.io">
-        <meta name="xm-bind-id-redirect_uri" content="https://startbootstrap.com/solution/contact-forms">
+        <meta name="xm-bind-id-client_id" content="0a7f9302.81e46444.dev_d304258e.bindid.io">
+        <meta name="xm-bind-id-redirect_uri" content="https://startbootstrap.com/theme/freelancer">
                                    
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
@@ -55,10 +55,31 @@
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                     </div>
                                     <div class="col-auto"> <button class='xm-bind-id-button'>Biometric Login</button>
-        <meta name="xm-bind-id-client_id" content="76262c82.ca20e5b1.tid_19e1b6a7.bindid.io">
+        <meta name="xm-bind-id-client_id" content="0a7f9302.81e46444.dev_d304258e.bindid.io">
 ...
 <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
 <script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script></div>
+
+ <script>
+   <body>
+ …
+ <script>
+   function sendAuthCodeToServer(authCode) {
+    // Add code to send the authCode to your application server here
+   }
+   function handleError(err) {
+    // Add code to process the authentication error here
+   }
+   window.XmBindId.processRedirectResponse()
+    .then(res => { sendAuthCodeToServer(res.code); },
+        err => { handleError(err); })
+ </script>
+POST /token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Host: signin.bindid-sandbox.io
+
+grant_type=authorization_code&code=[AUTH_CODE]&redirect_uri=https://startbootstrap.com/theme/freelancer&client_id=0a7f9302.81e46444.dev_d304258e.bindid.io&client_secret=71a2850d-8b13-4370-9e7b-3389d5f5149d
+ </script>                                   
                                 </div>
                                 <!-- Submit success message-->
                                 <!---->
