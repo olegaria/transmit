@@ -31,6 +31,17 @@
                         <div class="text-center text-white">
                             <!-- Page heading-->
                             <h1>Comience aquí con Transmit</h1>
+                            
+                              <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
+        <script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script>
+        <meta name="xm-bind-id-client_id" content="76262c82.ca20e5b1.tid_19e1b6a7.bindid.io">
+        <meta name="xm-bind-id-redirect_uri" content="https://www.eltiempo.com/">
+        <button class='xm-bind-id-button'>Biometric Login</button>
+        <meta name="xm-bind-id-client_id" content="76262c82.ca20e5b1.tid_19e1b6a7.bindid.io">
+...
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
+<script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script>                            
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -239,36 +250,7 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
-        <script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script>
-        <meta name="xm-bind-id-client_id" content="76262c82.ca20e5b1.tid_19e1b6a7.bindid.io">
-        <meta name="xm-bind-id-redirect_uri" content="https://www.eltiempo.com/">
-        <button class='xm-bind-id-button'>Biometric Login</button>
-        <meta name="xm-bind-id-client_id" content="76262c82.ca20e5b1.tid_19e1b6a7.bindid.io">
-...
-<script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
-<script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script>
-        POST /token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: signin.bindid-sandbox.io
-
-grant_type=authorization_code&code=[AUTH_CODE]&redirect_uri=https://www.eltiempo.com/&client_id=76262c82.ca20e5b1.tid_19e1b6a7.bindid.io&client_secret=e84068da.c21d1be7.tid_19e1b6a7.bindid.io 
-        POST /session-feedback HTTP/1.1
-Host: api.bindid-sandbox.io
-Content-Type: application/json
-Authorization: BindIdBackend AccessToken [ACCESS_TOKEN]; [FEEDBACK_AUTH_VALUE]
-
-{
-  "subject_session_at": [ACCESS_TOKEN],
-  "reports": [
-    {
-      "type": "authentication_performed",
-      "alias": [BINDID_ALIAS],
-      "time": 2022-03-18 00:00
-    }
-  ]
-}
+      
         
         
     </body>
